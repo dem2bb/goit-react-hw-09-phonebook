@@ -1,0 +1,59 @@
+.authForm {
+  width: 320px;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.384);
+  background-color: rgba(90, 141, 156, 0.315);
+}
+
+.authLabel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.authInput {
+  border-radius: 7px;
+  border: none;
+  padding: 5px;
+  outline: none;
+}
+
+.registerButton {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.459);
+  transition: 0.2s ease-in-out;
+  margin-left: 80px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.registerButton:before {
+  content: '';
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.5)
+  );
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
+}
+.registerButton:hover {
+  background: rgba(0, 0, 0, 0.658);
+  color: #fff;
+}
+.registerButton:hover:before {
+  left: 150px;
+  transition: 0.5s ease-in-out;
+}

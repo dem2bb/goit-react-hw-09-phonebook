@@ -1,0 +1,25 @@
+.usermenuCont {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.avatarImg {
+  margin-right: 10px;
+}
+
+.userName {
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.logoutBtn {
+  cursor: pointer;
+  padding: 8px;
+  border: none;
+  background-color: white;
+  background-image: url('../../icons//logout.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  outline: none;
+}

@@ -1,0 +1,22 @@
+.delete_button {
+  width: 15px;
+  height: 15px;
+  border: none;
+  background-color: white;
+  background-image: url(../../icons//delete.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.contactItem {
+  background-color: white;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
