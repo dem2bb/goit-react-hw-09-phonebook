@@ -1,8 +1,12 @@
 import React from 'react';
 import { delete_button, contactItem } from './ContactsItem.module.css';
-import { connect } from 'react-redux';
-import { contactsOperations } from '../../redux/phonebook';
-const ContactsItem = ({ filtered, onDelete }) => {
+import { useDispatch, useSelector } from 'react-redux';
+import { contactsSelectors, contactsOperations } from '../../redux/phonebook';
+
+const ContactsItem = () => {
+  const filtered = useSelector(contactsSelectors.getFilteredContacts);
+  const dispatch = useDispatch();
+
   return filtered.map(({ name, number, id }) => {
     return (
       <li key={id} name={name} className={contactItem}>
@@ -11,15 +15,11 @@ const ContactsItem = ({ filtered, onDelete }) => {
         <button
           type="button"
           className={delete_button}
-          onClick={() => onDelete(id)}
+          onClick={() => dispatch(contactsOperations.deleteContact(id))}
         ></button>
       </li>
     );
   });
 };
 
-const mapDispatchToProps = {
-  onDelete: contactsOperations.deleteContact,
-};
-
-export default connect(null, mapDispatchToProps)(ContactsItem);
+export default ContactsItem;
